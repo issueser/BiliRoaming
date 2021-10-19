@@ -173,6 +173,16 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
     }
     val kotlinJsonClass by Weak { "kotlinx.serialization.json.Json".findClassOrNull(mClassLoader) }
     val gsonConverterClass by Weak { mHookInfo["class_gson_converter"]?.findClassOrNull(mClassLoader) }
+    val playerOptionsPanelHolderClass by Weak {
+        mHookInfo["class_player_options_panel_holder"]?.findClassOrNull(
+            mClassLoader
+        )
+    }
+    val playerParamsBundleClass by Weak {
+        mHookInfo["class_playerparams_bundle"]?.findClassOrNull(
+            mClassLoader
+        )
+    }
     val playerCoreServiceV2Class by Weak {
         mHookInfo["class_player_core_service_v2"]?.findClassOrNull(
             mClassLoader
@@ -328,6 +338,11 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
     fun paramsToMap() = mHookInfo["method_params_to_map"]
 
     fun gson() = mHookInfo["field_gson"]
+    
+    fun playbackSpeedList() = mHookInfo["field_playback_speed_list"]
+
+    fun putSerializableToPlayerParamsBundle() =
+        mHookInfo["method_put_serializable_to_playerparams_bundle"]
 
     fun defaultSpeed() = mHookInfo["method_get_default_speed"]
 
