@@ -641,7 +641,6 @@ class SettingDialog(context: Context) : AlertDialog.Builder(context) {
         }
     }
 
-    class BackupRes(val res: Resources, val theme: Resources.Theme)
 
     companion object {
         @JvmStatic
