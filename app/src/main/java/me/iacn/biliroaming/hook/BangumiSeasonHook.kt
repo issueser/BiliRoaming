@@ -235,13 +235,13 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                     }
                     if (url.contains("game/center/h5/detail/game_card")) {
                         body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", 0)
+                        body.setIntField("code", FAIL_CODE)
                     } else if (url.startsWith("https://app.bilibili.com/x/v2/version/fawkes/upgrade?")) {
                         body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", 0)
+                        body.setIntField("code", FAIL_CODE)
                     } else if (url.startsWith("https://app.bilibili.com/x/v2/view/like?")) {
                         body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", 0)
+                        body.setIntField("code", FAIL_CODE)
                     }
                 }
             }
@@ -353,7 +353,7 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
         if (data != null) return data
         return instance.fastJsonClass?.callStaticMethod(
             instance.fastJsonParse(),
-            """{"code":-404,"message":"啥都木有","ttl":1,"data":null}""",
+            """{}""",
             instance.biliSpaceClass
         ) ?: data
     }
