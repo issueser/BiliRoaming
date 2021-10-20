@@ -232,16 +232,7 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                             body.setObjectField(dataField, fixDMSpace(data))
                             body.setIntField("code", 0)
                         }
-                    }
-                    if (url.contains("game/center/h5/detail/game_card")) {
-                        body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", FAIL_CODE)
-                    } else if (url.startsWith("https://app.bilibili.com/x/v2/version/fawkes/upgrade?")) {
-                        body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", FAIL_CODE)
-                    } else if (url.startsWith("https://app.bilibili.com/x/v2/view/like?")) {
-                        body.setObjectField(dataField, banApiRet(data))
-                        body.setIntField("code", FAIL_CODE)
+                        Log.toast(Uri.parse(url).getQueryParameter("vmid")?.toString())
                     }
                 }
             }
