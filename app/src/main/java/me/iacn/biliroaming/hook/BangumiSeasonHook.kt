@@ -232,7 +232,7 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                             body.setObjectField(dataField, fixDMSpace(data))
                             body.setIntField("code", 0)
                         }
-                        Log.toast(Uri.parse(url).getQueryParameter("vmid")?.toString())
+                        Log.toast(Uri.parse(url).getQueryParameter("vmid"))
                     }
                 }
             }
