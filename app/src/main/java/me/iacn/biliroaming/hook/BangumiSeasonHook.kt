@@ -347,6 +347,7 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
     private fun banApiRet(data: Any?): Any? {
         instance.biliSpaceClass ?: return data
         if (data != null) return data
+        Log.toast("已屏蔽相关功能。")
         return instance.fastJsonClass?.callStaticMethod(
             instance.fastJsonParse(),
             """{"code":-404,"message":"啥都木有","ttl":1,"data":null}""",
