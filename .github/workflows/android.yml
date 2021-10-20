@@ -17,7 +17,7 @@ jobs:
           java-version: 11
       - name: Retrieve version
         run: |
-          echo VERSION=$(echo ${{ github.event.head_commit.id }} | head -c 10) >> $GITHUB_ENV
+          echo VERSION=${{ github.repository_owner }}_$(echo ${{ github.event.head_commit.id }} | head -c 7) >> $GITHUB_ENV
       - uses: actions/cache@v2
         with:
           path: |
@@ -38,7 +38,7 @@ jobs:
           echo 'org.gradle.parallel=true' >> gradle.properties
           echo 'org.gradle.vfs.watch=true' >> gradle.properties
           echo 'org.gradle.jvmargs=-Xmx2048m' >> gradle.properties
-          bash ./gradlew -PappVerName=${{ github.repository_owner }}_${{ env.VERSION }} assembleRelease
+          bash ./gradlew -PappVerName=${{ env.VERSION }} assembleRelease
       - name: Upload built apk
         if: success()
         uses: actions/upload-artifact@v2
