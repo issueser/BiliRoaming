@@ -239,6 +239,9 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                     } else if (url.startsWith("https://app.bilibili.com/x/v2/version/fawkes/upgrade?")) {
                         body.setObjectField(dataField, banApiRet(data))
                         body.setIntField("code", 0)
+                    } else if (url.startsWith("https://app.bilibili.com/x/v2/view/like?")) {
+                        body.setObjectField(dataField, banApiRet(data))
+                        body.setIntField("code", 0)
                     }
                 }
             }
@@ -348,7 +351,6 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
     private fun banApiRet(data: Any?): Any? {
         instance.biliSpaceClass ?: return data
         if (data != null) return data
-        Log.toast("已屏蔽相关功能。")
         return instance.fastJsonClass?.callStaticMethod(
             instance.fastJsonParse(),
             """{"code":-404,"message":"啥都木有","ttl":1,"data":null}""",
