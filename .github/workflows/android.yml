@@ -55,12 +55,10 @@ jobs:
           not_sign: ${{ secrets.NOTICESIGN }}
           FILE: ${{ github.workspace }}/app/build/outputs/apk/release/BiliRoaming_${{ env.VERSION }}.apk
           COMMIT_MESSAGE: |+
-            New push\!
-            ${{ env.VERSION }}
+            New push to github\!
             ```
             ${{ github.event.head_commit.message }}
             ```by `${{ github.event.head_commit.author.name }}`
-            Snapshot apk download [link](https://github.com/issueser/BiliRoaming/actions/runs/${{ github.run_id }})
             See commit detail [here](${{ github.event.head_commit.url }})
             Snapshot apk is attached \(unsupported by TAICHI\)
         run: |
