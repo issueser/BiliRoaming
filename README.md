@@ -17,14 +17,22 @@ Logo来自[哔哩哔哩漫游娘](https://www.weibo.com/p/230418139a6f1100102vlj
 若导致原作者反感请联系本人删除该仓库。
  
 下载地址：[actions](https://github.com/issueser/BiliRoaming/actions/workflows/android.yml)，请选择打绿勾且标题为中文描述的版本，点击snapshot即可下载。
+</div>
  
-*与原版本的区别*  (不一定会与最新内容一致)
+***与原版本的区别***  (不一定会与最新内容一致)
  
-1.自定义倍速播放（观察[ee9b09f](https://github.com/issueser/BiliRoaming/tree/ee9b09fa2df3a4c35a91c5326aaa602b774741e5)恢复[a144562](https://github.com/issueser/BiliRoaming/tree/a14456201b4d5778fe40570259424f6a80e0535f)起移除的倍速功能）
+**1.自定义倍速播放**（观察[ee9b09f](https://github.com/issueser/BiliRoaming/tree/ee9b09fa2df3a4c35a91c5326aaa602b774741e5)恢复[a144562](https://github.com/issueser/BiliRoaming/tree/a14456201b4d5778fe40570259424f6a80e0535f)起移除的倍速功能）
+  6.15.0版本测试正常：
+ 
+  需要在全屏播放器右上角菜单，与【定时提醒】【播放方式】【画面尺寸】处于同一个位置的【播放速度】进行设置，而不是使用弹幕输入框右侧的速度进行设置；
+ 
+  【播放速度】中的速度文本不会改变，点击后会显示真正的文本，所以能自定义倍速的选项仅有6个。
+ 
+  （在高版本中似乎双指滑动可以切换倍速，似乎选项数量不受限制）
 
-2.版本号变更为[仓库所有者+commitID前七位]，原版为[commitID前10位]
+**2.版本号变更**为[仓库所有者+commitID前七位]，原版为[commitID前10位]
 
-3.空间toast用户uid
+**3.空间toast用户uid**
 
 ### License
 [GNU General Public License, version 3](LICENSE)
