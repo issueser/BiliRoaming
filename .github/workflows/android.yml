@@ -53,7 +53,7 @@ jobs:
           FILE: ${{ github.workspace }}/app/build/outputs/apk/release/BiliRoaming_${{ env.VERSION }}.apk
           COMMIT_MESSAGE: |+
             New push to github\!
-            version[${{ env.VERSION }}] 
+            version ${{ env.VERSION }}
             ```
             ${{ github.event.head_commit.message }}
             ```by `${{ github.event.head_commit.author.name }}`
