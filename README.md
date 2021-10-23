@@ -17,56 +17,27 @@ Logo来自[哔哩哔哩漫游娘](https://www.weibo.com/p/230418139a6f1100102vlj
 # BiliRoaming
 An Xposed module that unblocks bangumi area limit of BILIBILI, and miscellaneous features
 
+forked from [yujincheng08/BiliRoaming](https://github.com/yujincheng08/BiliRoaming)
+
 </div>
 
-# 支持以下功能
+### 该仓库为库主个人使用，非常不建议其它任何人使用
 
-- 解除B站番剧区域限制
-- 港澳台CDN加速
-- 缓存番剧
-- 支持国际版和概念版
-- 自定义主题色
-- 关闭青少年模式弹窗
-- 显示评论区楼层
-- ~概念版添加直播入口~
-- 不以小程序形式分享
-- 自动点赞视频
-- 把我的页面移到侧边栏
-- 替换音乐状态栏为原生样式
-- 提取视频、直播封面
-- 自定义屏启动图
+*由于不懂配置apps/pull导致仓库被重置，后续上游更新会手动进行“Fetch and merge”
 
-# Features
+本仓库出现原因：[issues/239](https://github.com/yujincheng08/BiliRoaming/issues/239) 个人想恢复倍速自定义，也想增加一点功能但是不想献丑
 
-- Unlock bangumi area limit
-- CDN speedup
-- Download bangumi
-- Support International ver and blue ver
-- Customize theme
-- Close teenager dialog
-- Show comment floor
-- ~Add live entry to blue ver~
-- Share without mini programs
-- Like videos automatically
-- Move 'Mine page' to sidebar drawer
-- Change music notification style to Primitive
-- Extra covers from videos and live rooms
-- Customized splash images
+本仓不标准原因：库主属于Ccv开发者(Ctrl + c +v)
 
-# download/下载
-https://github.com/yujincheng08/BiliRoaming/releases/latest
+如果本仓库导致原作者反感请联系本人删除.
 
-https://modules.lsposed.org/module/me.iacn.biliroaming
+与原版区别：
 
-# 使用方法
-https://github.com/yujincheng08/BiliRoaming/wiki#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
+0.版本号变更为【仓主用户名_commits id前7位】
 
-# 特别鸣谢
-- [原作者](https://github.com/iAcn/BiliRoaming)
-- [BiliPlus](https://www.biliplus.com/)
-- [Kghost](https://github.com/kghost/bilibili-area-limit)
+1.恢复自定义倍速与默认播放速度
 
-### 交流
-Telegram: [@biliroaming](https://t.me/biliroaming)
+下载地址[Actions](https://github.com/issueser/BiliRoaming/actions) (请使用打了绿勾且中文标注的版本) [Releases](https://github.com/issueser/BiliRoaming/releases) (请选择pre版本)
+
 ### License
 [GNU General Public License, version 3](LICENSE)
