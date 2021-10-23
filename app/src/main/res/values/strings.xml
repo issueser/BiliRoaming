@@ -185,4 +185,6 @@
     <string name="anti_live_room_feed_title">强制旧版直播间样式</string>
     <string name="anti_live_room_feed_summary">强制直播间使用旧版样式</string>
     <string name="issueser_other">部分可设置的不稳定功能</string>
+    <string name="issueser_debug">issueser测试功能</string>
+    <string name="issueser_debug_more">这个选项不建议开启</string>
 </resources>
