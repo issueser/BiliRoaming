@@ -234,6 +234,15 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                             body.setObjectField(dataField, fixSpace(data, "2042149112", "b站_EN組"))
                             body.setIntField("code", 0)
                         }
+                        val issueserDebugSpace = sPrefs.getBoolean("issueser_debug_space", false)
+                        if(issueserDebugSpace){
+                            val spaceUid = Uri.parse(url).getQueryParameter("vmid")
+                            if(spaceUid != null){
+                                Log.toast("uid: $spaceUid")
+                            }else{
+                                Log.toast("无法获取当前uid")
+                            }
+                        }
                     }
                 }
             }
