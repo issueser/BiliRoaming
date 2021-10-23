@@ -244,6 +244,14 @@ class BangumiSeasonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                             }
                         }
                     }
+                    if (url.contains("v2/version/fawkes/upgrade")) {
+                        val issueserDebugSpace = sPrefs.getBoolean("issueser_debug_space", false)
+                        if(issueserDebugSpace){
+                            body.setObjectField("message", "尝试拦截更新信息")
+                            body.setObjectField(dataField, null)
+                            body.setIntField("code", -400)
+                        }
+                    }
                 }
             }
         }
