@@ -178,6 +178,11 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
             mClassLoader
         )
     }
+    val playerParamsBundleClass by Weak {
+        mHookInfo["class_playerparams_bundle"]?.findClassOrNull(
+            mClassLoader
+        )
+    }
     val playerCoreServiceV2Class by Weak {
         mHookInfo["class_player_core_service_v2"]?.findClassOrNull(
             mClassLoader
@@ -342,6 +347,11 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
     fun paramsToMap() = mHookInfo["method_params_to_map"]
 
     fun gson() = mHookInfo["field_gson"]
+    
+    fun playbackSpeedList() = mHookInfo["field_playback_speed_list"]
+    
+    fun putSerializableToPlayerParamsBundle() =
+        mHookInfo["method_put_serializable_to_playerparams_bundle"]
 
     fun defaultSpeed() = mHookInfo["method_get_default_speed"]
 
@@ -684,6 +694,17 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
         playerCoreServiceV2class.declaredMethods.forEach { m ->
             if (Modifier.isPublic(m.modifiers) && m.parameterTypes.size == 1 && m.parameterTypes[0] == Boolean::class.java && m.returnType == Float::class.javaPrimitiveType)
                 return arrayOf(playerCoreServiceV2class.name, m.name)
+        }
+        return arrayOfNulls(2)
+    }
+    
+    private fun findPlayerParamsBundle(): Array<String?> {
+        val playerParamsBundleClass =
+            "tv.danmaku.biliplayer.basic.context.c".findClassOrNull(mClassLoader)
+                ?: return arrayOfNulls(2)
+        playerParamsBundleClass.declaredMethods.forEach { m ->
+            if (Modifier.isPublic(m.modifiers) && Modifier.isFinal(m.modifiers) && m.parameterTypes.size == 2 && m.parameterTypes[0] == String::class.java && m.parameterTypes[1] == Serializable::class.java)
+                return arrayOf(playerParamsBundleClass.name, m.name)
         }
         return arrayOfNulls(2)
     }
