@@ -127,6 +127,26 @@
             android:key="anti_live_room_feed"
             android:summary="@string/anti_live_room_feed_summary"
             android:title="@string/anti_live_room_feed_title" />
+        
+        <EditTextPreference
+            android:key="playback_speed_override"
+            android:summary="@string/playback_speed_override_summary"
+            android:title="@string/playback_speed_override_title" />
+
+        <EditTextPreference
+            android:key="default_playback_speed"
+            android:summary="@string/default_playback_speed_summary"
+            android:title="@string/default_playback_speed_title" />
+
+        <SwitchPreference
+            android:key="standalone_danmaku_speed"
+            android:summary="@string/standalone_danmaku_speed_summary"
+            android:title="@string/standalone_danmaku_speed_title" />
+
+        <Preference
+            android:key="customize_danmaku_config"
+            android:summary="@string/customize_danmaku_config_summary"
+            android:title="@string/customize_danmaku_config_title" />
 
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_backup">
