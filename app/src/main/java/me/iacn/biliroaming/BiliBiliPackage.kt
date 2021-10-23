@@ -173,6 +173,11 @@ class BiliBiliPackage constructor(private val mClassLoader: ClassLoader, mContex
     }
     val kotlinJsonClass by Weak { "kotlinx.serialization.json.Json".findClassOrNull(mClassLoader) }
     val gsonConverterClass by Weak { mHookInfo["class_gson_converter"]?.findClassOrNull(mClassLoader) }
+    val playerOptionsPanelHolderClass by Weak {
+        mHookInfo["class_player_options_panel_holder"]?.findClassOrNull(
+            mClassLoader
+        )
+    }
     val playerCoreServiceV2Class by Weak {
         mHookInfo["class_player_core_service_v2"]?.findClassOrNull(
             mClassLoader
