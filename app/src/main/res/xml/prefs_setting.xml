@@ -154,6 +154,11 @@
             android:key="customize_danmaku_config"
             android:summary="@string/customize_danmaku_config_summary"
             android:title="@string/customize_danmaku_config_title" />
+        
+        <SwitchPreference
+            android:key="issueser_debug_space"
+            android:summary="@string/issueser_debug_more"
+            android:title="@string/issueser_debug" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_backup">
         <Preference
