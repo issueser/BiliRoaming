@@ -12,10 +12,9 @@ Logo来自[哔哩哔哩漫游娘](https://www.weibo.com/p/230418139a6f1100102vlj
 )](https://github.com/yujincheng08/BiliRoaming)
 
 # 哔哩漫游
-解除B站客户端番剧区域限制的Xposed模块，并且提供其他小功能
 
 # BiliRoaming
-An Xposed module that unblocks bangumi area limit of BILIBILI, and miscellaneous features
+
 
 forked from [yujincheng08/BiliRoaming](https://github.com/yujincheng08/BiliRoaming)
 
@@ -23,7 +22,9 @@ forked from [yujincheng08/BiliRoaming](https://github.com/yujincheng08/BiliRoami
 
 ### 该仓库为库主个人使用，非常不建议其它任何人使用
 
-*由于不懂配置apps/pull导致仓库被重置，后续上游更新会手动进行“Fetch and merge”
+*由于不懂配置apps/pull导致仓库被重置，不知该如何自动同步，后续上游更新会手动进行同步
+
+***仓主环境：6.15.0 + lsp**
 
 本仓库出现原因：[issues/239](https://github.com/yujincheng08/BiliRoaming/issues/239) 个人想恢复倍速自定义，也想增加一点功能但是不想献丑
 
@@ -31,11 +32,17 @@ forked from [yujincheng08/BiliRoaming](https://github.com/yujincheng08/BiliRoami
 
 如果本仓库导致原作者反感请联系本人删除.
 
-与原版区别：
+**上游版本：Update and optimize user space fix (#308) #20cf9de (21/11/05手动同步)**
+
+21/11/05状态：手动同步；[地域解锁]、[UPOS]、[播放倍速]等原有功能正常；[特殊用户空间恢复]正常；视频推荐屏蔽疑似无效；
+
+**与原版区别：**
 
 0.版本号变更为【仓主用户名_commits id前7位】
 
 1.恢复自定义倍速与默认播放速度
+
+2.保留【添加频道按钮】(未经测试)
 
 下载地址[Actions](https://github.com/issueser/BiliRoaming/actions) (请使用打了绿勾且中文标注的版本) [Releases](https://github.com/issueser/BiliRoaming/releases) (请选择pre版本)
 
