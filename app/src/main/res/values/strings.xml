@@ -187,4 +187,6 @@
     <string name="issueser_other">部分可设置的不稳定功能</string>
     <string name="issueser_debug">issueser测试功能</string>
     <string name="issueser_debug_more">这个选项不建议开启</string>
+    <string name="block_video_ad_title">屏蔽视频下方推荐</string>
+    <string name="block_video_ad_summary">屏蔽视频下方推荐栏</string>
 </resources>
