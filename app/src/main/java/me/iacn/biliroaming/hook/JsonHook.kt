@@ -38,6 +38,8 @@ class JsonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
             "com.bilibili.bplus.followingcard.net.entity.b".findClassOrNull(mClassLoader)
         val spaceClass =
             "com.bilibili.app.authorspace.api.BiliSpace".findClassOrNull(mClassLoader)
+        val ogvApiResponseClass =
+            "tv.danmaku.bili.ui.offline.api.OgvApiResponse".findClassOrNull(mClassLoader)
 
         instance.fastJsonClass?.hookAfterMethod(
             instance.fastJsonParse(),
@@ -378,6 +380,13 @@ class JsonHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                                 else -> false
                             }
                         }
+                    }
+                }
+                
+                ogvApiResponseClass -> if (sPrefs.getBoolean("allow_download", false)) {
+                    val resultObj = result.getObjectFieldAs<ArrayList<Any>>("result")
+                    for (i in resultObj) {
+                        i.setIntField("isPlayable", 1)
                     }
                 }
             }
